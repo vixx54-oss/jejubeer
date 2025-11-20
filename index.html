@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=YOUR_APP_KEY"
+    ></script>
   </head>
   <body>
     <div class="header" id="header">
@@ -66,22 +70,19 @@
           <li><img src="./img/lineup-6.jpg" alt="제주누보" /></li>
           <li><img src="./img/lineup-7.jpg" alt="누보망고" /></li>
         </ul>
-        <a class="plus" href="#"
-          >자세히 보기<img src="./img/arrow.png" alt="화살표"
-        /></a>
       </section>
       <section class="tour">
-        <video autoplay muted loop playsinline>
-          <source src="./img/ply.mp4" type="video/mp4" />
-        </video>
+        <div class="video-wrap">
+          <video autoplay muted loop playsinline>
+            <source src="./img/tour.mp4" type="video/mp4" />
+          </video>
+        </div>
         <div class="tour-info">
           <p>
             제주맥주 한 잔이 만들어지기까지,<br />
             <strong>그 모든 과정을 직접 만나보세요.</strong>
           </p>
-          <a class="plus" href="#"
-            >자세히 보기<img src="./img/arrow.png" alt="화살표"
-          /></a>
+          <a class="plus" href="#">체험하러 가기</a>
         </div>
       </section>
       <section class="culture">
@@ -96,9 +97,7 @@
             <dl>
               <dt>이벤트</dt>
               <dd>
-                <a class="plus" href="#"
-                  >자세히 보기<img src="./img/arrow.png" alt="화살표"
-                /></a>
+                <a class="plus" href="#">더보기</a>
               </dd>
             </dl>
           </div>
@@ -106,9 +105,7 @@
             <dl>
               <dt>콜라보</dt>
               <dd>
-                <a class="plus" href="#"
-                  >자세히 보기<img src="./img/arrow.png" alt="화살표"
-                /></a>
+                <a class="plus" href="#">더보기</a>
               </dd>
             </dl>
             <ul>
@@ -120,21 +117,27 @@
         </div>
       </section>
       <section class="playlist">
-        <video class="ply-video" auto muted playsinline>
-          <source src="./img/.mp4" type="video/mp4" />
-        </video>
-        <div class="ply-info">
-          <dl>
-            <dt>PLAYLIST 01.</dt>
-            <dd>밀리지마 이 파도는 한 번 뿐이야</dd>
-          </dl>
-          <a class="plus" href="#"
-            >자세히 보기<img src="./img/arrow.png" alt="화살표"
-          /></a>
+        <div class="inner">
+          <video class="ply-video" auto muted playsinline>
+            <source src="./img/ply.mp4" type="video/mp4" />
+          </video>
+          <div class="ply-info">
+            <dl>
+              <dt>PLAYLIST 01.</dt>
+              <dd>밀리지마 이 파도는 한 번 뿐이야</dd>
+            </dl>
+            <a class="plus" href="#">더보기</a>
+          </div>
         </div>
       </section>
-      <section class="map"></section>
-      <!-- 보류 -->
+      <section class="map">
+        <div class="inner">
+          <h3>오시는 길</h3>
+        </div>
+        <div class="map-wrap">
+          <div id="map" style="width: 100%; height: 600px"></div>
+        </div>
+      </section>
     </div>
     <hr />
 
@@ -148,7 +151,9 @@
         <div class="foot">
           <ul class="foot-menu">
             <li><a href="#">이용약관</a></li>
-            <li><a href="#">개인정보처리방침</a></li>
+            <li>
+              <a href="#"><strong>개인정보처리방침</strong></a>
+            </li>
             <li><a href="#">영상정보 처리방침</a></li>
             <li><a href="#">윤리경영규정</a></li>
             <li><a href="#">내부정보관리규정</a></li>
@@ -179,5 +184,20 @@
       </div>
     </div>
     <hr />
+
+    <script>
+      var container = document.getElementById("map");
+      var options = {
+        center: new kakao.maps.LatLng(33.3846, 126.2969),
+        level: 3,
+      };
+      var map = new kakao.maps.Map(container, options);
+
+      var markerPosition = new kakao.maps.LatLng(33.3846, 126.2969);
+      var marker = new kakao.maps.Marker({
+        position: markerPosition,
+      });
+      marker.setMap(map);
+    </script>
   </body>
 </html>
