@@ -1,0 +1,92 @@
+@charset "UTF-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+/* 부드러운 앵커 스크롤 */
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Escoredream";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff")
+    format("woff");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Escoredream";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff")
+    format("woff");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Escoredream";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff")
+    format("woff");
+  font-weight: 800;
+  font-display: swap;
+}
+
+:root {
+  --main-color: #12cfca;
+  --black-color: #303e57;
+  --gray-color: #cfd2d3;
+
+  --point-color: #ff8672;
+}
+
+body {
+  line-height: 1.5;
+  text-transform: capitalize;
+  font-family: "Escoredream";
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--black-color);
+}
+
+/* 전체 페이지에서 가로 스크롤 방지 */
+html,
+body {
+  overflow-x: hidden;
+}
+
+.inner {
+  width: 100%;
+  max-width: 1600px; /* 고정 폭 대신 최대 폭으로 변경하여 작은 화면에서 가로 스크롤 방지 */
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+address {
+  font-style: normal;
+}
+
+h2 {
+  font-family: "Escoredream";
+  font-size: 70px;
+  font-weight: 800;
+
+  color: #000;
+}
+
+h3 {
+  font-family: "Escoredream";
+  font-size: 40px;
+  font-weight: 600;
+
+  color: var(--black-color);
+}
+
+/* 기본 커서 숨기기 */

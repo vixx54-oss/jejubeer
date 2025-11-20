@@ -1,0 +1,226 @@
+@charset "UTF-8";
+
+.plus {
+  padding: 16px 24px;
+  border-radius: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  background: var(--black-color);
+  border: 3px solid var(--black-color);
+  color: #fff;
+
+  transition: 0.3s;
+}
+
+.plus img {
+  width: 20px;
+}
+
+.plus:hover {
+  background: var(--main-color);
+  border: 3px solid var(--main-color);
+  color: #fff;
+}
+
+/* ======================================================plus */
+#header {
+  background: var(--main-color);
+}
+
+#header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 30px 0;
+}
+
+#header .logo a {
+  height: 25px;
+}
+
+#header .logo img {
+  width: 180px;
+  height: 100%;
+}
+
+#header ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 75px;
+}
+
+#header ul li {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+#header .more {
+  display: flex;
+  gap: 34px;
+}
+
+/* =========================================================main */
+
+#main .hero video {
+  width: 1920px;
+  height: 800px;
+
+  object-fit: cover;
+}
+
+#main .hero video source {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+}
+
+#main .hero h2 {
+  position: absolute;
+
+  left: 50%;
+  bottom: 40%;
+  transform: translate(-50%, 0);
+
+  color: #fff;
+}
+
+/* =========================================================intro */
+.intro .inner {
+  padding: 170px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 78px;
+}
+
+.intro dl {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  gap: 44px;
+  text-align: center;
+}
+
+.intro dl dt {
+  color: var(--main-color);
+  font-size: 28px;
+}
+
+.intro dl dt strong {
+  font-size: 40px;
+}
+
+.intro figure {
+  width: 380px;
+  aspect-ratio: 1/1;
+
+  overflow: hidden;
+  border-radius: 50px;
+}
+
+.intro figure img {
+  width: 100%;
+  height: 100%;
+}
+
+/* =======================================lineup */
+.lineup {
+  padding: 190px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 50px 0;
+
+  background: var(--gray-color);
+}
+
+.lineup ul {
+  display: flex;
+
+  gap: 25px;
+}
+
+.lineup ul li {
+  width: 350px;
+  aspect-ratio: 398/602;
+
+  overflow: hidden;
+}
+
+.lineup ul li img {
+  border-radius: 34px;
+  width: 100%;
+  height: 100%;
+}
+
+/* ============================================tour */
+.tour {
+  position: relative;
+}
+
+.tour video {
+  width: 1920px;
+  height: 700px;
+
+  object-fit: cover;
+}
+
+.tour video source {
+  width: 100%;
+  height: 100%;
+}
+
+.tour .tour-info {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+
+  gap: 65px;
+
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.tour .tour-info p {
+  text-align: center;
+  font-size: 28px;
+  color: #fff;
+}
+
+.tour .tour-info p strong {
+  font-size: 40px;
+}
+/* ===========================================culture */
+.culture .inner {
+  padding: 170px 0;
+  display: flex;
+  flex-direction: column;
+
+  gap: 50px;
+}
+
+.culture .ct {
+  display: flex;
+  justify-content: space-between;
+}
+
+.culture .ct ul {
+  display: flex;
+  justify-content: space-between;
+}
