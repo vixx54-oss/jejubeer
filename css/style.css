@@ -376,8 +376,10 @@
   margin-top: 150px;
 }
 
-.map .map-wrap{
+.map .map-wrap {
   margin-top: 60px;
+
+  background: #666;
 }
 /* ================================================footer */
 #footer {
