@@ -31,9 +31,10 @@ html {
 }
 
 :root {
-  --main-color: #12cfca;
+  --main-color: #1dcad3;
   --black-color: #303e57;
-  --gray-color: #cfd2d3;
+  --b-black-color: #333;
+  --gray-color: #d1d2d4;
 
   --point-color: #ff8672;
 }
@@ -42,7 +43,7 @@ body {
   line-height: 1.5;
   text-transform: capitalize;
   font-family: "Escoredream";
-  font-size: 18px;
+  font-size: 18x;
   font-weight: 500;
   color: var(--black-color);
 }
@@ -51,6 +52,11 @@ body {
 html,
 body {
   overflow-x: hidden;
+}
+
+.main-inner {
+  width: 94%;
+  margin: 0 auto;
 }
 
 .inner {
@@ -75,8 +81,8 @@ address {
 
 h2 {
   font-family: "Escoredream";
-  font-size: 70px;
-  font-weight: 800;
+  font-size: 45px;
+  font-weight: 600;
 
   color: #000;
 }
@@ -90,3 +96,6 @@ h3 {
 }
 
 /* 기본 커서 숨기기 */
+hr {
+  display: none;
+}
