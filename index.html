@@ -8,10 +8,17 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script
       type="text/javascript"
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=YOUR_APP_KEY"
     ></script>
+    <script src="script.js"></script>
   </head>
   <body>
     <div class="header" id="header">
@@ -21,11 +28,41 @@
             <a href="#"><img src="./img/logo.png" alt="사이트 로고" /></a>
           </h1>
           <ul class="gnb">
-            <li><a href="#">제주맥주</a></li>
-            <li><a href="#">맥주 & 굿즈</a></li>
-            <li><a href="#">양조장 투어</a></li>
-            <li><a href="#">온라인 구매</a></li>
-            <li><a href="#">고객센터</a></li>
+            <li>
+              <a href="#">제주맥주</a>
+              <ul class="sub-menu">
+                <li><a href="#">제주맥주 이야기</a></li>
+                <li><a href="#">제주맥주 리인업</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">맥주 & 굿즈</a>
+              <ul class="sub-menu">
+                <li><a href="#">굿즈 스토어</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">양조장 투어</a>
+              <ul class="sub-menu">
+                <li><a href="#">양조장 소개</a></li>
+                <li><a href="#">맥주 구매</a></li>
+                <li><a href="#">투어 안내</a></li>
+                <li><a href="#">자주 묻는 질문</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">온라인 구매</a>
+              <ul class="sub-menu">
+                <li><a href="#">시판차 주문</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">고객센터</a>
+              <ul class="sub-menu">
+                <li><a href="#">예약하기</a></li>
+                <li><a href="#">문의하기</a></li>
+              </ul>
+            </li>
           </ul>
           <div class="more">
             <a href="#"><img src="./img/surch.png" alt="검색창" /></a>
@@ -70,46 +107,35 @@
             </h3>
             <a class="plus" href="#">더보기</a>
           </div>
-          <div class="lineup-wrapper">
-            <ul class="lineup-track">
-              <li>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
                 <a href="#"><img src="./img/lineup-1.jpg" alt="제주라거" /></a>
-              </li>
-              <li>
+              </div>
+              <div class="swiper-slide">
+                <a href="#"><img src="./img/lineup-2.jpg" alt="제주맥주" /></a>
+              </div>
+              <div class="swiper-slide">
                 <a href="#"><img src="./img/lineup-3.jpg" alt="제주위트" /></a>
-              </li>
-              <li>
+              </div>
+              <div class="swiper-slide">
                 <a href="#"><img src="./img/lineup-4.jpg" alt="제주펠롱" /></a>
-              </li>
-              <li>
+              </div>
+              <div class="swiper-slide">
                 <a href="#"><img src="./img/lineup-5.jpg" alt="제주거멍" /></a>
-              </li>
-              <li>
+              </div>
+              <div class="swiper-slide">
                 <a href="#"><img src="./img/lineup-6.jpg" alt="제주누보" /></a>
-              </li>
-              <li>
+              </div>
+              <div class="swiper-slide">
                 <a href="#"><img src="./img/lineup-7.jpg" alt="누보망고" /></a>
-              </li>
-              <!-- 복제본 -->
-              <li>
-                <a href="#"><img src="./img/lineup-1.jpg" alt="제주라거" /></a>
-              </li>
-              <li>
-                <a href="#"><img src="./img/lineup-3.jpg" alt="제주위트" /></a>
-              </li>
-              <li>
-                <a href="#"><img src="./img/lineup-4.jpg" alt="제주펠롱" /></a>
-              </li>
-              <li>
-                <a href="#"><img src="./img/lineup-5.jpg" alt="제주거멍" /></a>
-              </li>
-              <li>
-                <a href="#"><img src="./img/lineup-6.jpg" alt="제주누보" /></a>
-              </li>
-              <li>
-                <a href="#"><img src="./img/lineup-7.jpg" alt="누보망고" /></a>
-              </li>
-            </ul>
+              </div>
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
         </div>
       </section>
@@ -162,9 +188,33 @@
       </section>
       <section class="playlist">
         <div class="main-inner">
-          <video class="ply-video" auto muted playsinline>
+          <video class="ply-video" playsinline>
             <source src="./img/ply.mp4" type="video/mp4" />
           </video>
+          <button class="play-btn">
+            <svg
+              class="play-icon"
+              width="80"
+              height="80"
+              viewBox="0 0 80 80"
+              fill="none"
+            >
+              <circle cx="40" cy="40" r="38" stroke="white" stroke-width="3" />
+              <path d="M32 25L55 40L32 55V25Z" fill="white" />
+            </svg>
+            <svg
+              class="pause-icon"
+              width="80"
+              height="80"
+              viewBox="0 0 80 80"
+              fill="none"
+              style="display: none"
+            >
+              <circle cx="40" cy="40" r="38" stroke="white" stroke-width="3" />
+              <rect x="28" y="25" width="8" height="30" fill="white" />
+              <rect x="44" y="25" width="8" height="30" fill="white" />
+            </svg>
+          </button>
           <div class="ply-info">
             <dl>
               <dt>PLAYLIST 01.</dt>
